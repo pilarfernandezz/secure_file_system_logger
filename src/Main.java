@@ -26,7 +26,7 @@ public class Main {
                     String date = res.getString("r.creation_datetime");
                     int code = res.getInt("m.id");
 
-                    String log = "Timestamp: " + date + " ----- Message: " + code + " - " + msg.replace("<login_name>", login).replace("<arq_name>", arq);
+                    String log = "Timestamp: " + date + " ----- Message: " + code + " - " + msg.replace("<login_name>", login != null ? login : "").replace("<arq_name>", arq != null ? arq : "");
                     logs.add(log);
                 }
 
